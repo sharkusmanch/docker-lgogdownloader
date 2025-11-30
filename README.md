@@ -8,18 +8,18 @@ Minimal Docker image for [LGOGDownloader](https://github.com/Sude-/lgogdownloade
 # First-time setup: authenticate with GOG
 docker run -it --rm \
   -v lgogdownloader-config:/home/lgog/.config/lgogdownloader \
-  ghcr.io/sharkusmanch/docker-lgogdownloader:latest --login
+  ghcr.io/sharkusmanch/lgogdownloader:latest --login
 
 # List your games
 docker run --rm \
   -v lgogdownloader-config:/home/lgog/.config/lgogdownloader \
-  ghcr.io/sharkusmanch/docker-lgogdownloader:latest --list
+  ghcr.io/sharkusmanch/lgogdownloader:latest --list
 
 # Download a game
 docker run --rm \
   -v lgogdownloader-config:/home/lgog/.config/lgogdownloader \
   -v /path/to/games:/games \
-  ghcr.io/sharkusmanch/docker-lgogdownloader:latest \
+  ghcr.io/sharkusmanch/lgogdownloader:latest \
   --download --game "game_name" --directory /games
 ```
 
